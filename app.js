@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
 
-var port  = process.env.PORT || 8280; // set up the port
+//var port  = process.env.PORT || 8280; // set up the port
 
 // ROUTES FOR OUR APP
 
@@ -32,7 +32,7 @@ router.use(function(req, resp, next){
 	// do logging
 	console.log('Something is happening');
 	next(); // make sure we go to the next routes and don't stop here
-})
+});
 
 
 //test router to make sure everything is working(accessed at GET http://localhost:8280/api)
@@ -81,8 +81,10 @@ router.route('/xml')
 app.use('/api', router);
 
 //START THE SERVER
-app.listen(port);
-console.log('Magic happens on port ' + port);
+app.listen(process.env.PORT || 8082, function(){
+	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
+
 
 
 
