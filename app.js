@@ -9,7 +9,8 @@ var jsontoxml = require('jstoxml');
 
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/mobilebulletin-dev'); // connect to our database
+mongoose.connect('mongodb://mobile:mobile123@ds031631.mlab.com:31631/heroku_vmn1kxq5'); //connection for Heroku hosting
+//mongoose.connect('mongodb://localhost:27017/mobilebulletin-dev'); // connect to our database
 
 
 //configure the app to use body-parser
