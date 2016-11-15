@@ -1,7 +1,7 @@
 // BASE SET UP
 
 //Call the packages we need
-var express  = require('express'); // call express
+var express  = require('express'); // call express module
 var app  = express(); 			   // define that our app uses express
 var bodyParser = require('body-parser');
 var jsontoxml = require('jstoxml');
