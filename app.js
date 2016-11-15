@@ -71,7 +71,7 @@ router.route('/xml')
 
         console.log('Number created!!');
 
-        res.header('Content-Type', 'text/xml').send(xml);
+       // res.header('Content-Type', 'text/xml').send(xml);
 	});
 });
 
