@@ -65,13 +65,13 @@ router.route('/xml')
                 sessionid: req.query.sessionid,
                 response: 'Welcome to Mobile Bulletin, Please Enter Your Name to register'
             }
-        },{header: false, indent: ' '});
+        },{header: true, indent: ' '});
 
         console.log(xml);
 
         console.log('Number created!!');
 
-       // res.header('Content-Type', 'text/xml').send(xml);
+        res.header('Content-Type', 'text/xml').send(xml);
 	});
 });
 
