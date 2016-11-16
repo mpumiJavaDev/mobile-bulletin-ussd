@@ -66,7 +66,7 @@ router.route('/xml')
                 response: 'Welcome to Mobile Bulletin, Please Enter Your Name to register'
             }
         },{header: true, indent: ' '});
-
+		console.log('Headers have been set');
         console.log(xml);
 
         console.log('Number created!!');
