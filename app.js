@@ -50,7 +50,7 @@ router.route('/xml')
 
 //create a number (accessed at GET http://localhost:8280/api/xml)
 .get(function(req, res){
-	console.log('in the get');
+
 	var number = new Numbers();
 	number.number = req.query.msidn;
 	console.log(req.query.msidn);
@@ -58,6 +58,7 @@ router.route('/xml')
 	// save the number and check for errors
 	number.save(function(err){
 		if(err)
+		    console.log(err);
 			res.send(err);
 
         var xml = jsontoxml.toXML({
@@ -66,7 +67,7 @@ router.route('/xml')
                 response: 'Welcome to Mobile Bulletin, Please Enter Your Name to register'
             }
         },{header: true, indent: ' '});
-		console.log('Headers have been set');
+
         console.log(xml);
 
         console.log('Number created!!');
