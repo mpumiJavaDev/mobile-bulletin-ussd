@@ -50,7 +50,7 @@ router.route('/xml')
 
 //create a number (accessed at GET http://localhost:8280/api/xml)
 .get(function(req, res){
-
+	console.log('in the get');
 	var number = new Numbers();
 	number.number = req.query.msidn;
 	console.log(req.query.msidn);
